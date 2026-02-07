@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>i love you</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* prevent scrollbars for falling hearts */
+    }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>She Said Yes 💘</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* no scrollbars */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 50px 60px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 400px;
+      width: 90%;
+      z-index: 10; /* keep on top */
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    .falling {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+      animation-name: fall;
+      animation-timing-function: linear;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>thanks for accepting my invitation, baby!</h1>
+    <p>i knew you’d say yes.</p>
+    <p>happy valentine’s day, my baby!. i just want to tell you how much you mean to me. you are the first person i think of when i wake up and the last thought before i sleep. life feels softer and brighter with you by my side.
+
+you make me feel safe, seen, and loved in ways i never knew i needed. even on hard days, your smile gives me calm. your laugh lifts my heart. your kindness reminds me to be gentle with myself and with the world.
+
+i love the little things we share. our talks, our jokes, the quiet moments, and the loud ones too. i love how you listen, how you care, and how you stay true to who you are. you inspire me just by being you.
+
+thank you for choosing me every day. thank you for your patience, your warmth, and your love. i promise to keep showing up, to keep trying, and to keep loving you with all my heart.
+
+today is about love, but my love for you is not just for today. it is for every day, in every way, always.
+forever, with you, feels like home, hope, and peace to me.
+I LOVE YOU TODAY, I LOVE YOU TOMORROW, AND I WILL LOVE YOU FOREVER AND EVER, ALWAYS AND IN ALL WAYS MY SWEETIE BA
+</p>
+  </div>
+
+ <script>
+    // images for raining effect
+    const images = [
+      'heart.png',    // your heart image
+      'flower.png',   // your flower image
+      'ourpicture.jpg'    // your picture
+    ];
+
+    function createFallingImage() {
+      const img = document.createElement("img");
+img.classList.add("falling");
+
+const random = Math.random();
+if (random < 0.3) {
+  img.src = 'ourpicture.jpg';
+  img.style.width = '120px'; // your picture bigger
+  img.style.height = '120px';
+} else if (random < 0.65) {
+  img.src = 'heart.png';
+  const size = 50+ Math.random() * 100; 
+  img.style.width = size + "px";
+  img.style.height = size + "px";
+} else {
+  img.src = 'flower.png';
+  const size = 50 + Math.random() * 100;
+  img.style.width = size + "px";
+  img.style.height = size + "px";
+}
+
+// keep animation duration reasonable
+const duration = 4 + Math.random() * 3; // 4–7 seconds
+img.style.animationDuration = duration + "s";
+
+img.style.left = Math.random() * window.innerWidth + "px";
+
+document.body.appendChild(img);
+
+setTimeout(() => {
+  img.remove();
+}, duration * 1000);
+
+    }
+
+    // create new falling image every 300ms
+    setInterval(createFallingImage, 300);
+  </script>
+
+
+<audio id="valentinesong" autoplay loop>
+  <source src="ikawatako.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+</body>
+</html>
